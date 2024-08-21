@@ -15,4 +15,13 @@ body {
   width: 1440px;
   color: var(--foreground);
   background: var(--main-background);
-}
+   &::-webkit-scrollbar {
+			@apply w-1.5;
+		}
+		&::-webkit-scrollbar-track {
+			@apply rounded-md bg-[#C0B7E8];
+		}
+		&::-webkit-scrollbar-thumb {
+			@apply rounded-md bg-[#8176AF];
+		}
+  }

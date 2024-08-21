@@ -6,11 +6,12 @@ interface IButton extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export function Button({ children, variant = 'primary', ...props }: IButton) {
-	const { className } = props;
+	const { className, ...rest } = props;
 	return (
 		<button
 			className={clsx(
 				'rounded-[40px] px-[38px] py-4 text-xs font-bold uppercase transition-all duration-200 active:translate-y-1',
+				className,
 				{
 					'bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] text-[#343045] hover:brightness-150':
 						variant === 'primary',
@@ -18,7 +19,7 @@ export function Button({ children, variant = 'primary', ...props }: IButton) {
 						variant === 'secondary',
 				}
 			)}
-			{...props}
+			{...rest}
 		>
 			{children}
 		</button>
