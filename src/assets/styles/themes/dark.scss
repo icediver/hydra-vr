@@ -17,4 +17,8 @@
   --third:   #6C63FF;
   --review: #DDF7FF;
   --progress: #43C8B1;
+
+  .primary-btn {
+    @apply bg-gradient-to-r from-[#8176AF] to-[#C0B7E8] text-[#343045] hover:brightness-150 rounded-[40px] px-[38px] py-4 text-xs font-bold uppercase transition-all duration-200 active:translate-y-1;
+  }
 }

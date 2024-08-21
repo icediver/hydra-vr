@@ -73,7 +73,7 @@ export function Footer() {
 				</div>
 			</div>
 			<p className="mx-auto">
-				2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED{' '}
+				2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED
 			</p>
 		</div>
 	);

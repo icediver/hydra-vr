@@ -1,0 +1,25 @@
+.section {
+ .step {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   height: 198px;
+   width: 198px;
+   background: rgba(13, 13, 13, 0.32);
+   &>div{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       height: 159px;
+       width: 159px;
+       border-radius: 50%;
+       background: linear-gradient(251.38deg, rgb(192, 183, 232) 12.874%,rgb(129, 118, 175) 89.331%);
+       color: rgb(52, 48, 69);
+       font-size: 64px;
+       font-weight: 700;
+       line-height: 78px;
+       letter-spacing: 0%;
+   }
+ }
+}
