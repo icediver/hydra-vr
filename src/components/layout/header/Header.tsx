@@ -10,7 +10,7 @@ export function Header() {
 	const [isOpen, setIsOpen] = useState(false);
 	return (
 		<header
-			className={clsx('absolute left-0 z-50 h-full w-full', {
+			className={clsx('absolute left-0 z-50 w-full', {
 				['bottom-0 right-0 top-0 w-full overflow-hidden bg-[var(--main-background)] transition-colors duration-500']:
 					isOpen,
 			})}

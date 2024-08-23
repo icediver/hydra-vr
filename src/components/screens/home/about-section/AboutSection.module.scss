@@ -1,9 +1,11 @@
 .section {
-  width: 1272px;
-  height: 756px;
+  @media (min-width: 1280px) {
+    width: 1272px;
+    height: 756px;
+    background: url('/images/Vector7.png') left bottom 282px no-repeat,
+                url('/images/Vector8.png') left bottom 42px no-repeat;
+  }
   margin: 90px auto;
-  background: url('/images/Vector7.png') left bottom 282px no-repeat,
-              url('/images/Vector8.png') left bottom 42px no-repeat;
   .image {
     width: 524px;
     height: 557px;
@@ -12,4 +14,16 @@
     background: rgb(163, 163, 163);
     background: url('/images/about.png') top left -20px no-repeat;
   }
-}
+  @media (max-width: 1280px) {
+    display: flex;
+    margin: 59px auto;
+    flex-direction: column;
+    justify-content: center;
+
+    .image {
+        border-radius: 60px 140px 60px 140px;
+        width: 360px;
+        height: 336px;
+        }
+      }
+    }

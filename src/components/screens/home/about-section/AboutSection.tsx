@@ -1,18 +1,19 @@
+import { Button } from '@/components/ui/button/Button';
 import styles from './AboutSection.module.scss';
 import LargeArrow from '@/assets/icons/big-arrow.svg';
 
 export function AboutSection() {
 	return (
 		<section className={styles.section}>
-			<div className="mx-auto flex w-[1275px] justify-between">
+			<div className="mx-auto flex justify-between xl:w-[1275px]">
 				<div className="flex gap-4">
 					<div>
 						<p className="text-4xl font-bold">INTRODUCTION</p>
 						<p className="mt-4 text-4xl">TO HYDRA VR?</p>
 					</div>
-					<LargeArrow className="relative -bottom-[25px] h-[100px] w-[228px] place-items-end" />
+					<LargeArrow className="relative -bottom-[25px] hidden h-[100px] w-[228px] place-items-end xl:block" />
 				</div>
-				<p className="w-[653px]">
+				<p className="hidden xl:block xl:w-[653px]">
 					Vitae sapien pellentesque habitant morbi tristique senectus et netus
 					et. Feugiat nibh sed pulvinar proin gravida hendrerit lectus. Mi sit
 					amet mauris commodo quis imperdiet massa tincidunt nunc. Viverra
@@ -20,14 +21,14 @@ export function AboutSection() {
 					Lectus magna fringilla urna porttitor rhoncus vitae.
 				</p>
 			</div>
-			<div className="mx-auto mt-[97px] flex w-[1275px] justify-between">
-				<div className={styles.image}></div>
-				<div className="flex w-[630px] flex-col justify-center gap-4">
-					<div>
+			<div className="mx-auto mt-[36px] flex flex-col justify-between xl:mt-[97px] xl:w-[1275px] xl:flex-row">
+				<div className={styles.image} />
+				<div className="flex flex-col justify-center gap-4 xl:w-[630px]">
+					<div className="hidden xl:block">
 						<p className="text-4xl font-bold">ABOUT</p>
 						<p className="mt-4 text-4xl">HYDRA VR</p>
 					</div>
-					<p className="w-[653px]">
+					<p className="w-[352px] text-wrap pt-[51px] xl:w-[653px]">
 						Eget mi proin sed libero enim sed faucibus turpis. Nisl rhoncus
 						mattis rhoncus urna neque viverra justo. Vivamus at augue eget arcu
 						dictum. Ultrices gravida dictum fusce ut placerat orci. Aenean et
@@ -39,6 +40,9 @@ export function AboutSection() {
 						dapibus. Sem nulla pha retra diam sit amet nisl suscipit adipiscing
 						bibendum. Leo a diam sollicitudi n tempor.{' '}
 					</p>
+					<Button className="mt-[29px] xl:w-[214px]">
+						Let&apos;s get in touch
+					</Button>
 				</div>
 			</div>
 		</section>

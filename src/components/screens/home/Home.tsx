@@ -11,8 +11,9 @@ export function Home({}: IHome) {
 	return (
 		<div>
 			<HeroSection />
+			<AboutSection />
+
 			{/*
-      <AboutSection />
       <ServicesSection />
       <TechSection />
       <ProcessSection />
