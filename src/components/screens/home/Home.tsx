@@ -13,8 +13,9 @@ export function Home({}: IHome) {
 			<HeroSection />
 			<AboutSection />
 			<ServicesSection />
+			<TechSection />
+
 			{/*
-      <TechSection />
       <ProcessSection />
       <OptInSection />
 */}
