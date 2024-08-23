@@ -4,9 +4,7 @@ import { Header } from './header/Header';
 export function MainLayout({ children }: { children: React.ReactNode }) {
 	return (
 		<div>
-			{/*
-      <Header />
-*/}
+			<Header />
 			{children}
 			{/*
       <Footer />

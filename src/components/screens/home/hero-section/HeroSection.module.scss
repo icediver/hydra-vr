@@ -41,7 +41,16 @@
       background: url("/images/Vector1.png") top 77px right -59px no-repeat,
               url("/images/Vector2.png") top -105px left 8px no-repeat,
               url("/images/Vector3.png") top 286px right -64px no-repeat;
-      .imageBorder {
+      &::before {
+        content: "";
+        position: absolute;
+        width: 390px;
+        height: 184px;
+        left: 0;
+        top: 0;
+        background: linear-gradient(var(--transparent-background) 20% 80%, transparent 100%);
+      }
+     .imageBorder {
         left: 25px;
         width: 340px;
         height: 296px;
