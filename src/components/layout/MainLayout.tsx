@@ -1,12 +1,16 @@
-import { Footer } from "./footer/Footer";
-import { Header } from "./header/Header";
+import { Footer } from './footer/Footer';
+import { Header } from './header/Header';
 
 export function MainLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <div>
+	return (
+		<div>
+			{/*
       <Header />
-      {children}
+*/}
+			{children}
+			{/*
       <Footer />
-    </div>
-  );
+*/}
+		</div>
+	);
 }

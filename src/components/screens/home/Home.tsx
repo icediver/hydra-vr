@@ -11,11 +11,13 @@ export function Home({}: IHome) {
 	return (
 		<div>
 			<HeroSection />
-			<AboutSection />
-			<ServicesSection />
-			<TechSection />
-			<ProcessSection />
-			<OptInSection />
+			{/*
+      <AboutSection />
+      <ServicesSection />
+      <TechSection />
+      <ProcessSection />
+      <OptInSection />
+*/}
 		</div>
 	);
 }
