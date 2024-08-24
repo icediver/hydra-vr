@@ -47,7 +47,7 @@ export function Partners() {
 		}
 	}
 	return (
-		<div className="relative mx-auto grid h-[220px] w-[340px] items-center justify-center xl:w-full xl:grid-cols-4">
+		<div className="relative mx-auto grid h-[220px] w-[340px] xl:mt-[75px] xl:w-full xl:grid-cols-4 xl:justify-end">
 			{partners.map((partner, index) => (
 				<Image
 					key={index}
@@ -55,7 +55,7 @@ export function Partners() {
 					alt="Hydra-tech"
 					width={partner.width}
 					height={partner.height}
-					className={clsx('image mx-auto w-[190px] xl:mx-0 xl:w-full', {
+					className={clsx('image mx-auto w-[190px] xl:mx-0 xl:w-[250px]', {
 						'hidden xl:block': index !== active,
 						block: index === active,
 					})}

@@ -14,11 +14,8 @@ export function Home({}: IHome) {
 			<AboutSection />
 			<ServicesSection />
 			<TechSection />
-
-			{/*
-      <ProcessSection />
-      <OptInSection />
-*/}
+			<ProcessSection />
+			<OptInSection />
 		</div>
 	);
 }
