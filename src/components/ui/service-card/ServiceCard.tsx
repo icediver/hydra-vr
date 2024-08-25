@@ -5,8 +5,11 @@ import clsx from 'clsx';
 import LeftArrow from '@/assets/icons/left-arrow.svg';
 import RightArrow from '@/assets/icons/right-arrow.svg';
 import { RoundButton } from '../round-button/RoundButton';
+import { ISliderItem } from '../slider/Slider';
 
-export interface IServiceCard extends React.HTMLAttributes<HTMLDivElement> {
+export interface IServiceCard
+	extends React.HTMLAttributes<HTMLDivElement>,
+		ISliderItem {
 	image: string;
 	title: string;
 	description: string;
@@ -21,12 +24,15 @@ export function ServiceCard({
 	link,
 	handleClick,
 	className,
+	index,
+	active,
 	...rest
 }: IServiceCard) {
 	return (
 		<div
 			className={clsx(
-				'relative transition-transform duration-300 hover:scale-105 hover:brightness-125',
+				'relative mx-auto transition-transform duration-300 hover:scale-105 hover:brightness-125',
+				index === active ? 'block' : 'hidden xl:block',
 				styles.card,
 				className
 			)}
@@ -53,18 +59,6 @@ export function ServiceCard({
 					Try it now
 				</Link>
 			</div>
-			<RoundButton
-				className="absolute -left-[22px] top-1/2 -mt-[22px] xl:hidden"
-				onClick={() => handleClick('left')}
-			>
-				<LeftArrow />
-			</RoundButton>
-			<RoundButton
-				className="absolute -right-[22px] top-1/2 -mt-[22px] xl:hidden"
-				onClick={() => handleClick('right')}
-			>
-				<RightArrow />
-			</RoundButton>
 		</div>
 	);
 }

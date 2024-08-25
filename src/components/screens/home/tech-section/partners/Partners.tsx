@@ -1,10 +1,6 @@
 'use client';
-import clsx from 'clsx';
-import Image from 'next/image';
-import { useState } from 'react';
-import ArrowLeft from '@/assets/icons/left-arrow.svg';
-import ArrowRight from '@/assets/icons/right-arrow.svg';
-import { RoundButton } from '@/components/ui/round-button/RoundButton';
+import { Slider } from '@/components/ui/slider/Slider';
+import { PartnerItem } from './partner-item/PartnerItem';
 
 const partners = [
 	{
@@ -30,49 +26,9 @@ const partners = [
 ];
 
 export function Partners() {
-	const [active, setActive] = useState(0);
-	function handleClick(direction: 'left' | 'right') {
-		if (direction === 'left') {
-			if (active === 0) {
-				setActive(partners.length - 1);
-			} else {
-				setActive(active - 1);
-			}
-		} else {
-			if (active === partners.length - 1) {
-				setActive(0);
-			} else {
-				setActive(active + 1);
-			}
-		}
-	}
 	return (
-		<div className="relative mx-auto grid h-[220px] w-[340px] xl:mt-[75px] xl:w-full xl:grid-cols-4 xl:justify-end">
-			{partners.map((partner, index) => (
-				<Image
-					key={index}
-					src={partner.src}
-					alt="Hydra-tech"
-					width={partner.width}
-					height={partner.height}
-					className={clsx('image mx-auto w-[190px] xl:mx-0 xl:w-[250px]', {
-						'hidden xl:block': index !== active,
-						block: index === active,
-					})}
-				/>
-			))}
-			<RoundButton
-				className="absolute left-0 top-1/2 -mt-[22px] xl:hidden"
-				onClick={() => handleClick('left')}
-			>
-				<ArrowLeft />
-			</RoundButton>
-			<RoundButton
-				className="absolute right-0 top-1/2 -mt-[22px] xl:hidden"
-				onClick={() => handleClick('right')}
-			>
-				<ArrowRight />
-			</RoundButton>
+		<div className="relative mx-auto grid h-[220px] w-[378px] xl:mt-[75px] xl:w-full xl:grid-cols-4 xl:justify-end">
+			<Slider Item={PartnerItem} data={partners} />
 		</div>
 	);
 }

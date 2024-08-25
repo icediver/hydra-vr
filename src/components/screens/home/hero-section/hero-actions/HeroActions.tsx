@@ -38,11 +38,27 @@ const actions: IHeroActions[] = [
 
 export function HeroActions() {
 	const [active, setActive] = useState(0);
+	function handleClick(direction: 'left' | 'right') {
+		if (direction === 'left') {
+			if (active === 0) {
+				setActive(actions.length - 1);
+			} else {
+				setActive(active - 1);
+			}
+		} else {
+			if (active === actions.length - 1) {
+				setActive(0);
+			} else {
+				setActive(active + 1);
+			}
+		}
+	}
+
 	return (
 		<footer className={styles.footer}>
 			<LeftArrow
 				className="mr-2.5 h-[30px] w-[30px] xl:hidden"
-				onClick={() => active > 0 && setActive(active - 1)}
+				onClick={() => handleClick('left')}
 			/>
 			<ul className="flex w-full justify-between">
 				{actions.map(({ Icon, title, description }, index) => (
@@ -71,7 +87,7 @@ export function HeroActions() {
 			</ul>
 			<RightArrow
 				className="ml-2.5 h-[30px] w-[30px] xl:hidden"
-				onClick={() => active < 2 && setActive(active + 1)}
+				onClick={() => handleClick('right')}
 			/>
 		</footer>
 	);
