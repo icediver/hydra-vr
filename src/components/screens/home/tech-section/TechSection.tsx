@@ -1,21 +1,23 @@
 import clsx from 'clsx';
-import Image from 'next/image';
 import Shape from '@/assets/icons/shape.svg';
+import { Partners } from './partners/Partners';
 
 export function TechSection() {
 	return (
-		<section className="mx-auto h-[630px] w-[1278px]">
+		<section className="mx-auto xl:h-[630px] xl:w-[1278px]">
 			<div
 				className={clsx(
-					"h-[303px] w-[1278px] rounded-full bg-[url('/images/pexels-rodnae-productions.png')] bg-[left_-150px_bottom_-580px] bg-no-repeat uppercase",
-					'relative flex flex-col items-center justify-center text-4xl'
+					"mx-auto h-[168px] w-[348px] rounded-full bg-[url('/images/pexels-rodnae-productions.png')] bg-[length:900px_auto] bg-no-repeat uppercase",
+					'bg-[left_-230px_bottom_-300px]',
+					'xl:h-[303px] xl:w-[1278px] xl:bg-[length:auto_auto] xl:bg-[left_-150px_bottom_-580px]',
+					'relative flex flex-col items-center justify-center xl:text-4xl'
 				)}
 			>
 				<p className="font-bold">Technologies & hardware</p>
-				<p>uded by Hydra VR.</p>
+				<p className="text-2xl xl:text-4xl">used by Hydra VR.</p>
 				<div
 					className={clsx(
-						'flex h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-[#0E0E0E52] active:translate-y-1',
+						'hidden h-[100px] w-[100px] cursor-pointer items-center justify-center rounded-full bg-[#0E0E0E52] active:translate-y-1 xl:flex',
 						'absolute -bottom-[50px] transition-all duration-300'
 					)}
 				>
@@ -24,32 +26,7 @@ export function TechSection() {
 					</div>
 				</div>
 			</div>
-			<div className="grid grid-cols-4 items-end">
-				<Image
-					src="/images/Hydra-Tech11.png"
-					alt="Hydra-tech"
-					width={174}
-					height={174}
-				/>
-				<Image
-					src="/images/Hydra-Tech21.png"
-					alt="Hydra-tech"
-					width={252}
-					height={252}
-				/>
-				<Image
-					src="/images/Hydra-Tech31.png"
-					alt="Hydra-tech"
-					width={263}
-					height={263}
-				/>
-				<Image
-					src="/images/Hydra-Tech41.png"
-					alt="Hydra-tech"
-					width={282}
-					height={282}
-				/>
-			</div>
+			<Partners />
 		</section>
 	);
 }

@@ -8,6 +8,7 @@ import Twitter from '@/assets/icons/twitter.svg';
 import Youtube from '@/assets/icons/youtube.svg';
 import { Button } from '@/components/ui/button/Button';
 import Link from 'next/link';
+import clsx from 'clsx';
 
 const leftColumn = [
 	{ title: 'About', url: '/about' },
@@ -26,8 +27,13 @@ const rightColumn = [
 
 export function Footer() {
 	return (
-		<div className="absolute bottom-[59px] flex h-[340px] w-full flex-col justify-between bg-[url('/images/Vector17.png')] bg-[bottom_49px_left_84px] bg-no-repeat px-[84px]">
-			<div className="grid grid-cols-4">
+		<div
+			className={clsx(
+				"xl:bg-[url('/images/Vector17.png' )] absolute bottom-[59px] flex w-full flex-col xl:h-[340px]",
+				'items-center justify-between bg-[bottom_49px_left_0px] bg-no-repeat px-[84px]'
+			)}
+		>
+			<div className="grid items-center justify-items-center xl:grid-cols-4 xl:justify-items-start">
 				<Image
 					src="/images/logo.png"
 					alt="logo"
@@ -35,7 +41,7 @@ export function Footer() {
 					height={185}
 					className="h-[185px] w-[185px]"
 				/>
-				<ul className="uppercase">
+				<ul className="hidden uppercase xl:block">
 					{leftColumn.map((item) => (
 						<li key={item.title} className="pb-5">
 							<Link
@@ -47,7 +53,7 @@ export function Footer() {
 						</li>
 					))}
 				</ul>
-				<ul className="uppercase">
+				<ul className="hidden uppercase xl:block">
 					{rightColumn.map((item) => (
 						<li key={item.title} className="pb-5">
 							<Link
@@ -59,7 +65,7 @@ export function Footer() {
 						</li>
 					))}
 				</ul>
-				<div>
+				<div className="text-center">
 					<p className="pb-10 font-bold uppercase">Socialize with hydra</p>
 					<div className="flex gap-5 pb-12 [&>svg]:h-8 [&>svg]:w-8 [&>svg]:cursor-pointer">
 						<Facebook className="transition-all duration-300 hover:scale-105 hover:brightness-200" />
@@ -72,7 +78,7 @@ export function Footer() {
 					<Button>Build your World</Button>
 				</div>
 			</div>
-			<p className="mx-auto">
+			<p className="mx-auto mt-[99px]">
 				2023 © HYDRA LANDING PAGE - BY ZINE. E. FALOUTI - ALL RIGHTS RESERVED
 			</p>
 		</div>

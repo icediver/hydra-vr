@@ -12,8 +12,12 @@
 body {
   position: relative;
   margin: 0 auto;
-  width: 1440px;
+  @media (min-width: 1280px) {
+    width: 1280px
+  }
+  /* width: 1440px; */
   color: var(--foreground);
+
   background: var(--main-background);
    &::-webkit-scrollbar {
 			@apply w-1.5;
@@ -24,4 +28,15 @@ body {
 		&::-webkit-scrollbar-thumb {
 			@apply rounded-md bg-[#8176AF];
 		}
-  }
+}
+
+@media  (max-width: 1280px) {
+   body{
+      width: 390px;
+   }
+
+}
+
+.gradient {
+  background: linear-gradient(180deg, #8176AF 0%, #C0B7E8 100%);
+}

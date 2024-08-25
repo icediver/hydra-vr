@@ -21,12 +21,22 @@ export function OptInSection() {
 		<section className={styles.section}>
 			<form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 				<div className="text-center">
-					<p className="pb-[30px] text-4xl font-bold uppercase">Join Hydra</p>
-					<Image src="/images/Vector16.png" alt="line" width={414} height={5} />
-					<p className="pt-5 text-4xl">Let&apos;s Build Your VR Experience</p>
+					<p className="pb-[30px] text-2xl font-bold uppercase xl:text-4xl">
+						Join Hydra
+					</p>
+					<Image
+						src="/images/Vector16.png"
+						alt="line"
+						width={414}
+						height={5}
+						className="mx-auto hidden xl:block"
+					/>
+					<p className="pt-5 text-2xl xl:text-4xl">
+						Let&apos;s Build Your VR Experience
+					</p>
 				</div>
 				<div className="text-center">
-					<div className="grid w-[1058px] grid-cols-2 gap-2.5">
+					<div className="grid gap-2.5 pt-9 xl:w-[1058px] xl:grid-cols-2">
 						<Field
 							{...register('firstName')}
 							placeholder="First Name"
@@ -56,9 +66,9 @@ export function OptInSection() {
 							placeholder="Subject"
 							error={errors.subject?.message?.toString()}
 							label="subject"
-							className="col-span-2"
+							className="xl:col-span-2"
 						/>
-						<div className="col-span-2">
+						<div className="xl:col-span-2">
 							<textarea
 								className={
 									'h-[210px] w-full resize-none rounded-[40px] border border-white bg-transparent p-5 outline-none'
@@ -77,7 +87,7 @@ export function OptInSection() {
 							</div>
 						</div>
 					</div>
-					<Button className="mt-[51px]" type="submit">
+					<Button className="mt-[51px] w-full xl:w-[214px]" type="submit">
 						Send to Hydra
 					</Button>
 				</div>
