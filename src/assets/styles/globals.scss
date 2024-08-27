@@ -4,39 +4,37 @@
 @import 'themes/dark';
 
 :root {
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
-
 
 body {
-  position: relative;
-  margin: 0 auto;
-  @media (min-width: 1280px) {
-    width: 1280px
-  }
-  /* width: 1440px; */
-  color: var(--foreground);
+	position: relative;
+	margin: 0 auto;
+	@media (min-width: 1280px) {
+		width: 1280px;
+	}
+	/* width: 1440px; */
+	color: var(--foreground);
 
-  background: var(--main-background);
-   &::-webkit-scrollbar {
-			@apply w-1.5;
-		}
-		&::-webkit-scrollbar-track {
-			@apply rounded-md bg-[#C0B7E8];
-		}
-		&::-webkit-scrollbar-thumb {
-			@apply rounded-md bg-[#8176AF];
-		}
+	background: var(--main-background);
+	&::-webkit-scrollbar {
+		@apply w-1.5;
+	}
+	&::-webkit-scrollbar-track {
+		@apply rounded-md bg-[#C0B7E8];
+	}
+	&::-webkit-scrollbar-thumb {
+		@apply rounded-md bg-[#8176AF];
+	}
 }
 
-@media  (max-width: 1280px) {
-   body{
-      width: 390px;
-   }
-
+@media (max-width: 1280px) {
+	body {
+		width: 390px;
+	}
 }
 
 .gradient {
-  background: linear-gradient(180deg, #8176AF 0%, #C0B7E8 100%);
+	background: linear-gradient(180deg, #8176af 0%, #c0b7e8 100%);
 }

@@ -1,8 +1,8 @@
 .section {
-  position: relative;
-  @media (min-width: 1280px) {
-    height: 830px;
-    /* padding: 0 84px; */
-    background: url("/images/Vector14.png") top 269px  right no-repeat,
-  }
+	position: relative;
+	@media (min-width: 1280px) {
+		height: 830px;
+		/* padding: 0 84px; */
+		background: url('/images/Vector14.png') top 269px right no-repeat;
+	}
 }

@@ -1,36 +1,38 @@
 .section {
-        height: 1865px;
-      .form {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        border-radius: 40px;
-        top: 112px;
-        padding: 45px 22px;
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-        background: radial-gradient(50.00% 50.00% at 50% 50%,rgb(64, 58, 95),rgb(33, 30, 46) 100%);
-        /* padding-bottom: 792px; */
+	height: 1865px;
+	.form {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		border-radius: 40px;
+		top: 112px;
+		padding: 45px 22px;
+		box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+		background: radial-gradient(
+			50% 50% at 50% 50%,
+			rgb(64, 58, 95),
+			rgb(33, 30, 46) 100%
+		);
+		/* padding-bottom: 792px; */
+	}
+	position: relative;
+	@media (min-width: 1280px) {
+		height: 1641px;
+		padding: 0 auto;
+		background:
+			url('/images/Vector18.png') bottom 168px right no-repeat,
+			url('/images/Vector19.png') bottom 348px right no-repeat;
 
-      }
-  position: relative;
-     @media (min-width: 1280px) {
+		.form {
+			padding: 90px 0;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: 1008px;
+			width: 1275px;
+			top: 112px;
 
-      height: 1641px;
-      padding: 0 auto;
-      background: url("/images/Vector18.png") bottom 168px right no-repeat,
-                  url("/images/Vector19.png") bottom 348px right  no-repeat;
-
-
-      .form {
-        padding: 90px 0;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 1008px;
-        width: 1275px;
-        top: 112px;
-
-        border-radius: 100px;
-      }
-    }
+			border-radius: 100px;
+		}
+	}
 }
