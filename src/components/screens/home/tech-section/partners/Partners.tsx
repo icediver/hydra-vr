@@ -27,8 +27,10 @@ const partners = [
 
 export function Partners() {
 	return (
-		<div className="relative mx-auto grid h-[220px] w-[378px] xl:mt-[75px] xl:w-full xl:grid-cols-4 xl:justify-end">
-			<Slider Item={PartnerItem} data={partners} />
-		</div>
+		<Slider
+			Item={PartnerItem}
+			data={partners}
+			className="relative mx-auto grid h-[220px] w-[378px] xl:mt-[75px] xl:w-full xl:grid-cols-4 xl:justify-end"
+		/>
 	);
 }
