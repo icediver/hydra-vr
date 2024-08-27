@@ -22,7 +22,7 @@ export const plugins = [
 				},
 
 				'.text-gradient': {
-					background: 'linear-gradient(90deg, #c731ef, #fe5f0c) ',
+					background: 'linear-gradient(90deg, #c731ef, #fe5f0c)',
 					'-webkit-background-clip': 'text',
 					color: 'transparent',
 					'-webkit-text-fill-color': 'transparent',
